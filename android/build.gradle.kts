@@ -1,3 +1,12 @@
+buildscript{
+    repositories{
+
+    }
+    dependencies{
+        classpath("com.google.gms:google-services:4.6.0") 
+    }
+}
+
 allprojects {
     repositories {
         google()

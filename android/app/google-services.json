@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "310857118059",
+    "project_id": "fvg-proyecto-dam-ev3-2026",
+    "storage_bucket": "fvg-proyecto-dam-ev3-2026.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310857118059:android:9b7ea0beeb9312f0165c2e",
+        "android_client_info": {
+          "package_name": "cl.fvasquezg.proyecto_dam_2026"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg_OeAtivb5yqUgvD51hWElC5HV6zJ8Zw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
