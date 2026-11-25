@@ -14,6 +14,17 @@ class _HomePageState extends State<HomePage> {
   User? user;
 
   @override
+  void initState() {
+    super.initState();
+    AuthService().currentUser().then((currentU) {
+      if (!mounted) return;
+      setState(() {
+        user = currentU;
+      });
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -24,7 +35,7 @@ class _HomePageState extends State<HomePage> {
           color: Colors.white,
         ), //cambiar
         title: Text(
-          user?.email ?? "Cargando datos...",
+          user?.displayName ?? user?.email ?? "Cargando datos...",
           style: TextStyle(color: Colors.white, fontSize: 20),
         ),
         actions: [
