@@ -28,15 +28,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.cyan.shade500,
-        leading: Icon(
-          MdiIcons.accountBadge,
-          size: 26,
-          color: Colors.white,
-        ), //cambiar
+        backgroundColor: Color(0xFF005E90),
+        leading: Icon(MdiIcons.accountBadge, size: 26, color: Colors.white),
         title: Text(
           user?.displayName ?? user?.email ?? "Cargando datos...",
           style: TextStyle(color: Colors.white, fontSize: 20),
+          overflow: TextOverflow.ellipsis,
         ),
         actions: [
           IconButton(
@@ -44,6 +41,7 @@ class _HomePageState extends State<HomePage> {
               await AuthService().logout();
             },
             icon: Icon(MdiIcons.logout, size: 24, color: Colors.white),
+            tooltip: "Cerrar Sesión",
           ),
         ],
       ),

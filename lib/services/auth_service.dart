@@ -16,7 +16,7 @@ class AuthService {
       );
       return await FirebaseAuth.instance.signInWithCredential(credential);
     } catch (ex) {
-      print(ex); //comentar después
+      //print(ex); //comentar después
       //retorna null porque falló en devolver una credencial válida
       return null;
     }
