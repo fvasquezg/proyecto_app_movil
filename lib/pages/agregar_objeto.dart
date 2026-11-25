@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:proyecto_moviles/pages/utils/style.dart';
+import 'package:proyecto_moviles/utils/style.dart';
 import 'package:proyecto_moviles/services/objetos_service.dart';
 
 class AgregarObjeto extends StatefulWidget {

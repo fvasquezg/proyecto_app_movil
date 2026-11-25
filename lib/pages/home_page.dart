@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:proyecto_moviles/pages/agregar_objeto.dart';
 import 'package:proyecto_moviles/pages/listar_objetos.dart';
-import 'package:proyecto_moviles/pages/utils/style.dart';
+import 'package:proyecto_moviles/utils/style.dart';
 import 'package:proyecto_moviles/services/auth_service.dart';
 import 'package:proyecto_moviles/services/objetos_service.dart';
 

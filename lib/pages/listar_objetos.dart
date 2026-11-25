@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:proyecto_moviles/pages/detalles_objeto.dart';
-import 'package:proyecto_moviles/pages/utils/style.dart';
+import 'package:proyecto_moviles/utils/style.dart';
 
 class ListarObjetos extends StatelessWidget {
   const ListarObjetos({super.key, required this.stream});
