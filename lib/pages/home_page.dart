@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
+import 'package:proyecto_moviles/services/auth_service.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -27,11 +28,11 @@ class _HomePageState extends State<HomePage> {
           style: TextStyle(color: Colors.white, fontSize: 20),
         ),
         actions: [
-          TextButton(
+          IconButton(
             onPressed: () async {
-              //final resul = await AuthService().logout();
+              await AuthService().logout();
             },
-            child: Text('Cerrar Cesión', style: TextStyle(color: Colors.white)),
+            icon: Icon(MdiIcons.logout, size: 24, color: Colors.white),
           ),
         ],
       ),

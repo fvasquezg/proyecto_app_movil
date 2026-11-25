@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:proyecto_moviles/services/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
@@ -62,13 +61,17 @@ class _LoginState extends State<LoginPage> {
                   SizedBox(height: 24),
                   ElevatedButton(
                     onPressed: () async {
-                      hayError = false;
+                      setState(() => hayError = false);
                       final resul = await AuthService().login();
                       if (resul == null && mounted) {
                         setState(() {
                           hayError = true;
                           msjError = "No se pudo iniciar sesión";
                         });
+                        await Future.delayed(Duration(seconds: 4));
+                        if (mounted) {
+                          setState(() => hayError = false);
+                        }
                       }
                     },
                     style: ElevatedButton.styleFrom(
@@ -81,8 +84,10 @@ class _LoginState extends State<LoginPage> {
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(MdiIcons.accountCircle),
-                        Text("  Google"),
+                        //Icon(MdiIcons.accountCircle),
+                        Image.asset('assets/img/google-logo.png', height: 20),
+                        SizedBox(width: 10),
+                        Text("Google"),
                       ],
                     ),
                   ),
@@ -103,7 +108,7 @@ class _LoginState extends State<LoginPage> {
                               SizedBox(width: 8),
                               Expanded(
                                 child: Text(
-                                  msjError.trim(),
+                                  msjError,
                                   style: TextStyle(color: Colors.red),
                                 ),
                               ),
