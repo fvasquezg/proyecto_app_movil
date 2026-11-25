@@ -49,6 +49,6 @@ flutter {
     source = "../.."
 }
 
-dependencies{
-    implementation(platform("com.google.firebase:firebase-bom:35.2.0"))
+dependencies {
+    implementation(platform("com.google.firebase:firebase-bom:35.1.0"))
 }

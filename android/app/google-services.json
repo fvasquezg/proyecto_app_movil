@@ -12,7 +12,20 @@
           "package_name": "cl.fvasquezg.proyecto_dam_2026"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "310857118059-vqckglp3r2ktdg4i2vm040ldmomc8h4a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cl.fvasquezg.proyecto_dam_2026",
+            "certificate_hash": "f2922a1767741896af1cdc97b79186ede1471c5f"
+          }
+        },
+        {
+          "client_id": "310857118059-v8lis83cfjmiciffu3gcbj7te76e5b88.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBg_OeAtivb5yqUgvD51hWElC5HV6zJ8Zw"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310857118059-v8lis83cfjmiciffu3gcbj7te76e5b88.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
