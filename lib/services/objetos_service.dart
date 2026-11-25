@@ -39,7 +39,7 @@ class ObjetosService {
     required Uint8List fotoBytes,
   }) {
     final user = FirebaseAuth.instance.currentUser!;
-    return FirebaseFirestore.instance.collection('objetos').add({
+    return FirebaseFirestore.instance.collection('objetos').doc().set({
       'titulo': titulo,
       'descripcion': descripcion,
       'tipo': tipo,

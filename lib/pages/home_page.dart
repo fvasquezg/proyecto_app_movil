@@ -62,6 +62,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: Center(child: Text('FYP')),
+      floatingActionButton: FloatingActionButton(onPressed: () {}),
     );
   }
 }
