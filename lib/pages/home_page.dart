@@ -12,6 +12,15 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   User? user;
+  bool guardando = false;
+  final formAgregarKey = GlobalKey<FormState>;
+  final formEditarKey = GlobalKey<FormState>;
+  //controllers
+  final tituloCtrl = TextEditingController();
+  final descripcionCtrl = TextEditingController();
+  final tipoCtrl = TextEditingController();
+  final categoriaCtrl = TextEditingController();
+  final lugarCtrl = TextEditingController();
 
   @override
   void initState() {
@@ -23,6 +32,13 @@ class _HomePageState extends State<HomePage> {
       });
     });
   }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+  void limpiarForm() {}
 
   @override
   Widget build(BuildContext context) {

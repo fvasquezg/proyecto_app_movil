@@ -22,8 +22,8 @@ class ObjetosService {
     final userUid = FirebaseAuth.instance.currentUser!.uid;
     return FirebaseFirestore.instance
         .collection('objetos')
-        .orderBy('fecha', descending: true)
         .where('autorUid', isEqualTo: userUid)
+        .orderBy('fecha', descending: true)
         .snapshots();
   }
 

@@ -9,7 +9,7 @@ class AuthWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<User?>(
-      //cada vez que hay un login o logout la app se reconstruiye desde acá
+      //cada vez que hay un login o logout la app se reconstruiye desde acá porque cambia qué pantalla se ve
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
