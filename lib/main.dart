@@ -1,10 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:proyecto_moviles/pages/auth_wrapper.dart';
 import 'package:proyecto_moviles/pages/home_page.dart';
+import 'package:proyecto_moviles/pages/login_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  await GoogleSignIn.instance.initialize();
   runApp(const MyApp());
 }
 
@@ -33,7 +37,7 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: .fromSeed(seedColor: Colors.cyanAccent), //cambiar color
       ),
       home: const HomePage(),
     );
